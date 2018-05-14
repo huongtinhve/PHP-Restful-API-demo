@@ -2,7 +2,7 @@
 ## Introduction:
 - This is the simple PHP Restful API which is implemented without using frameworks.
 - In this demo project, I built login/logout function and implemented an endpoint (/users) to consume request from client so that we can select and update user's data (such as name, address, phone ...)
-- I try to implement this demo follow single-page's for login/logout so that we nearly unchange the URI when login/logout.
+- I try to implement this demo follow single-page's style for login/logout so that we nearly unchange the URI.
 - I also try to implement some function to secure the login process and API calling such as: prevent cookies thief, using pair of email address and access key to enable API call.
 
 There are 2 main functions in this demo:
