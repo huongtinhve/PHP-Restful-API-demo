@@ -35,6 +35,12 @@ if($allow_access_api==true){
             $param_array = explode("/",$_REQUEST['q2']);
             if($param_array[1]=="users" && isset($param_array[2]) && is_numeric($param_array[2])){
                 $dataset=json_decode(file_get_contents("php://input"),true);
+                $size = count($dataset);
+                if(sizeof($dataset)!=3){
+                    echo "Your data's structure is wrong format, ";
+                    echo 'The right format is: {"name":"Christiano Ronaldo","address":"Real Marid FC, Spain","telephone":"0107070707"}';
+                    exit;
+                }
                 $users->updateUserById($param_array[2],$dataset);
             }else echo "This is not valid endpoint";
         }
